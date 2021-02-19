@@ -1,0 +1,19 @@
+{
+  "name": "docker-node",
+  "version": "0.0.1",
+  "description": "dockerized node app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "start:dev": "nodemon index"
+  },
+  "author": "Moxart",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.11.17"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

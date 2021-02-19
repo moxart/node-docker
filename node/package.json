@@ -4,8 +4,7 @@
   "description": "dockerized node app",
   "main": "index.js",
   "scripts": {
-    "start": "node index",
-    "start:dev": "nodemon index"
+    "start": "nodemon index"
   },
   "author": "Moxart",
   "license": "ISC",

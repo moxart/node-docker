@@ -1,21 +1,25 @@
 version: '3.9'
 
 services:
-  node:
-    container_name: node
-    build: ./node
+  express:
+    container_name: express
+    build:
+      context: ./express
+      dockerfile: Dockerfile
+      target: production
     restart: always
     env_file:
       - .env
     environment:
+      - NODE_ENV=production
       - MONGO_USERNAME=$MONGO_USERNAME
       - MONGO_PASSWORD=$MONGO_PASSWORD
       - MONGO_HOSTNAME=mongo
       - MONGO_PORT=$MONGO_PORT
       - MONGO_DB=$MONGO_DATABASE
     volumes:
-      - ./node:/app/node
-      - /app/node/node_modules
+      - ./express:/app/express
+      - /app/express/node_modules
     ports:
       - 3000:3000
     depends_on:

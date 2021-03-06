@@ -6,12 +6,12 @@ services:
     build:
       context: ./express
       dockerfile: Dockerfile
-      target: production
+      target: dev
     restart: always
     env_file:
       - .env
     environment:
-      - NODE_ENV=production
+      - NODE_ENV=development
       - MONGO_USERNAME=$MONGO_USERNAME
       - MONGO_PASSWORD=$MONGO_PASSWORD
       - MONGO_HOSTNAME=mongo
